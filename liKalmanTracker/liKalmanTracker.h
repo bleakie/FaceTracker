@@ -43,7 +43,7 @@ public:
 	void track(vector<Point2f> measurement);
 	vector<Point2f> trackment();
 	void print(int frameCount = 0);
-	Mat show(Mat src, int type，vector<vector<Point2f>::const_iterator>& trajectory);
+	Mat show(Mat src, int type, vector<vector<Point2f>::const_iterator>& trajectory);
 
 private:
 	vector<bool> idTabel;
