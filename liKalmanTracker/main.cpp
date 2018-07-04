@@ -9,6 +9,7 @@ int main()
 	cv::VideoCapture cap(0);
 	int nFrameCount = 1;
 	Mat src;
+	vector<vector<Point2f>::const_iterator> trajectory;
 	while (true)
 	{
 		cap >> src;
