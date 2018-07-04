@@ -209,22 +209,22 @@ vector<Point2f> liKalmanTracker::trackment()
 void liKalmanTracker::print(int frameCount)
 {
 	cout << endl;
-	cout << "©°©¤©¤©¤©¤©¤©Ð©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´" << endl;
-	cout << "©¦   " << left << setw(6) << frameCount << " ©¦ count ";
+	cout << "åºšå²¸å²¸å²¸å²¸å²¸æˆ¿å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸åº–" << endl;
+	cout << "å²«   " << left << setw(6) << frameCount << " å²« count ";
 	cout << left << setw(6) << count;
-	cout << "                               ©¦" << endl;
+	cout << "                               å²«" << endl;
 	if (idTabel.size() == 1)
 	{
-		cout << "©¸©¤©¤©¤©¤©¤©Ø©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼" << endl;
+		cout << "å¼©å²¸å²¸å²¸å²¸å²¸æ‹‚å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å½¼" << endl;
 		return;
 	}
-	cout << "©À©¤©¤©¤©¤©¤©à©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©Ð©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©È" << endl;
-	cout << "©¦    id    ©¦      position      ©¦      confidence      ©¦" << endl;
-	cout << "©À©¤©¤©¤©¤©¤©à©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©à©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©È" << endl;
+	cout << "å¿µå²¸å²¸å²¸å²¸å²¸æ‹ˆå²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸æˆ¿å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸æ€•" << endl;
+	cout << "å²«    id    å²«      position      å²«      confidence      å²«" << endl;
+	cout << "å¿µå²¸å²¸å²¸å²¸å²¸æ‹ˆå²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸æ‹ˆå²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸æ€•" << endl;
 
 	for (int i = 1; i < idTabel.size(); i++)
 	{
-		cout << "©¦    " << left << setw(6) << i << "©¦";
+		cout << "å²«    " << left << setw(6) << i << "å²«";
 		if (idTabel[i])
 		{
 			int label = 0;
@@ -235,20 +235,20 @@ void liKalmanTracker::print(int frameCount)
 			}
 			cout << "[" << right << fixed << setw(8) << setprecision(2) << target[label].position().x << ",";
 			cout << right << fixed << setw(8) << setprecision(2) << target[label].position().y << " ]";
-			cout << "©¦" << right << fixed << setw(16) << target[label].confidence << "      ©¦" << endl;
+			cout << "å²«" << right << fixed << setw(16) << target[label].confidence << "      å²«" << endl;
 		}
 		else
-			cout << "        ----        ©¦         ----         ©¦" << endl;
+			cout << "        ----        å²«         ----         å²«" << endl;
 
 		if (i != idTabel.size() - 1)
-			cout << "©À©¤©¤©¤©¤©¤©à©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©à©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©È" << endl;
+			cout << "å¿µå²¸å²¸å²¸å²¸å²¸æ‹ˆå²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸æ‹ˆå²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸æ€•" << endl;
 		else
-			cout << "©¸©¤©¤©¤©¤©¤©Ø©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©Ø©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼" << endl;
+			cout << "å¼©å²¸å²¸å²¸å²¸å²¸æ‹‚å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸æ‹‚å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å²¸å½¼" << endl;
 	}
 
 }
 
-Mat liKalmanTracker::show(Mat src, int type_0)
+Mat liKalmanTracker::show(Mat src, int type_0, vector<vector<Point2f>::const_iterator>& trajectory)
 {
 	Mat dst = src.clone();
 	for (int i = 0; i < target.size(); i++)
@@ -280,7 +280,8 @@ Mat liKalmanTracker::show(Mat src, int type_0)
 			circle(dst, *(pt - 1), 3, color, 1);
 			line(dst, *(pt - 1), *pt, color, 1);
 			pt--;
-		}
+		}		
+		trajectory.push_back(pt);
 	}
 
 	return dst;
