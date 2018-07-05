@@ -7,7 +7,6 @@ int main()
 {	
 	liKalmanTracker tracker(40, "face");
 	cv::VideoCapture cap(0);
-	int nFrameCount = 1;
 	Mat src;
 	vector<vector<Point2f>::const_iterator> trajectory;
 	while (true)
@@ -18,7 +17,6 @@ int main()
 		vector<Point2f> measurement = liCorrectDetection(dets,/* ROI,*/ tracker.size);	
 
 		tracker.track(measurement);
-		tracker.print(nFrameCount);
 		src = tracker.show(src, 0, trajectory);
 		namedWindow("Tracking", CV_WINDOW_AUTOSIZE);
 		imshow("Tracking", src);
