@@ -19,7 +19,7 @@ int main()
 
 		tracker.track(measurement);
 		tracker.print(nFrameCount);
-		src = tracker.show(src, 0);
+		src = tracker.show(src, 0, trajectory);
 		namedWindow("Tracking", CV_WINDOW_AUTOSIZE);
 		imshow("Tracking", src);
 
