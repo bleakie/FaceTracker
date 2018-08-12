@@ -1,5 +1,6 @@
 # FaceTracker
-基于卡尔曼滤波的人脸跟踪
-
-1.需要添加OpenCV
-2.将.h文件和.cpp文件分别放在各自目录
+Face tracking based on Calman filter
+# How to compile on Windows？
+1.You need to install OpenCV.
+2.Add files include and Lib.
+3.You need to compile using vs2013 or later.
