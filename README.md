@@ -9,3 +9,5 @@ Face tracking based on kalman filter
 
 3.You need to compile using vs2013 or later.
 
+# Result
+![result](https://github.com/bleakie/FaceTracker/blob/master/result.png)
